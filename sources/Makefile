@@ -101,21 +101,19 @@ $(NAME_BONUS):	$(OBJS_MAIN_BONUS) $(OBJS_UTILS_BONUS)
 			@echo "$(ORANGE) Compilando Ejecutable  ➟  $(RED)$@ $(WHITE)"
 
 clean :
-			@make fclean -s -C $(LIBFT_DIR)
-			@$(RM) $(OBJ_DIR)
-			@$(RM) $(OBJ_DIR_BONUS)
-			@echo "$(RED)\n ✗ Archivos objetos push_swap borrados.‼️\n$(WHITE)";
+			@$(RM) $(OBJ_DIR) $(NAME)
+			@$(RM) $(OBJ_DIR_BONUS) $(NAME_BONUS)
+			@echo "$(RED)\n ✗ Archivos objetos projecto borrados.‼️\n$(WHITE)";
 
 fclean : clean
-			@$(RM) $(NAME)
-			@$(RM) $(NAME_BONUS)
-			@echo "$(GREEN) Todo Super limpito...✌🏼 $(WHITE)" 
+			@make fclean -s -C $(LIBFT_DIR)
+			@echo "$(GREEN) Todo el proyecto super limpito...♻️ $(WHITE)" 
 
 re: fclean all
-			@echo "$(YELLOW) Borrado todo y recompilado...✌🏼$(WHITE)"
+			@echo "$(YELLOW) Borrado todo y recompilado...🔆$(WHITE)"
 
 reb: fclean bonus
-			@echo "$(YELLOW) Borrado todo y recompilado...✌🏼$(WHITE)"
+			@echo "$(YELLOW) Borrado todo y recompilado...🔆$(WHITE)"
 
 norm:
 			@norminette $(SRC_DIR) | grep -v Norme -B1 || true

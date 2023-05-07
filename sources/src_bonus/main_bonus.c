@@ -6,7 +6,7 @@
 /*   By: nmota-bu <nmota-bu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:45:28 by nmota-bu          #+#    #+#             */
-/*   Updated: 2023/05/07 19:12:34 by nmota-bu         ###   ########.fr       */
+/*   Updated: 2023/05/07 19:52:09 by nmota-bu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 /* ║                 https://github.com/nach131/42Barcelona                 ║ */
 /* ╚════════════════════════════════════════════════════════════════════════╝ */
 
-#include "push_swap_bonus.h"
+#include "base42_bonus.h"
 
 int	main(int argc, char **argv)
 {
+	(void)argc;
+	(void)argv;
+	ft_printf("Bonus main\n");
+	print_util_bonus();
 	return (0);
 }
